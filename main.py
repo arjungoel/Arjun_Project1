@@ -4,6 +4,7 @@ spy_salutation=input("What should we call you :")
 # check whether spy has input something or not
 if len(spy_name) > 0:
     #code block if the condition is true.
-# concatenation of salutation and name
-spy_name=(spy_salutation  +  " "  +  spy_name)
-print('Welcome'  + spy_name +  "Glad to have you back with us.")
+    # concatenation of salutation and name
+    spy_name = (spy_salutation + " " + spy_name)
+    print('Welcome' + spy_name + "Glad to have you back with us.")
+    print("Alright" + spy_name + "I would like to know little bit about you before we proceed.")

@@ -19,18 +19,17 @@ elif (existing == 'N') :
 
     # check whether spy has input something or not
     if len(spy['name']) > 0:
-        # input more details about user.
-        spy_age = 0
-        spy_rating = 0.0
-        spy_is_online = False
-        spy_salutation = input("What should we call you :")
-        spy_age = input("Enter your age. ?")
-        print(type(spy_age))
-        spy_age = int(spy_age)
-        print(spy_age)
-        spy_name = (spy_salutation + " " + spy_name)
-        print('Welcome' + spy_name + "Glad to have you back with us.")
-        print("Alright" + spy_name + "I would like to know little bit about you before we proceed.")
+
+        spy['salutation'] = input("What should we call you :")
+        spy['age'] = int(input("Enter your age. ?")) # typecasting of users input is done.
+        # concatenation of salutation and name of spy
+        spy_name = spy['salutation'] + " " + spy['name']
+
+        spy['rating']=float(input("What is your spy rating :")) # typecasting is done here.
+        spy['is_online']=True
+
+        # starting chat application
+        start_chat(spy['name'],spy['age'],spy['rating'],spy['is_online'])
     else:
         print(" Invalid name. Try again.")
 else:

@@ -13,7 +13,7 @@ def add_friend():
     new_friend['name'] = input("Please add your friend's name: ")
     new_friend['salutation']= input("Are they Mr. or Ms.?: ")
 
-    # concatination.
+    # concatenation of name and salutation.
     new_friend['name'] = new_friend['salutation'] + " " + new_friend['name']
 
     new_friend['age'] = int(input("Age? "))

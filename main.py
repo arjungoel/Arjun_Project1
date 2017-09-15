@@ -21,7 +21,12 @@ elif (existing == 'N') :
     if len(spy['name']) > 0:
 
         spy['salutation'] = input("What should we call you :")
-        spy['age'] = int(input("Enter your age. ?")) # typecasting of users input is done.
+        while True:
+            try:
+                spy['age'] = int(input("Enter your age. ?")) # typecasting of users input is done.
+                break
+            except ValueError:
+                print("Invalid age.Try again")
         # concatenation of salutation and name of spy
         spy_name = spy['salutation'] + " " + spy['name']
 

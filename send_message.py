@@ -1,6 +1,9 @@
 from select_friend import select_friend
 from steganography.steganography import Steganography
-
+from globals import friends
+from termcolor import colored
+from datetime import datetime
+import re
 def send_message():
     # choose a friend from the list.
     friend_choice = select_friend()

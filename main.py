@@ -32,7 +32,7 @@ elif (existing == 'N') :
         patternrating = '^[0-9]+\.[0-9]$'
     # validation using regular expression
         while tempcheck:
-            spy['salutation']=input("Are they Mr. or Mrs.:")
+            spy['salutation']=input("What should we call you Mr. or Mrs.:")
             if (re.match(patternsalutation, salutation) != None):
                 tempcheck = False
             else:
@@ -48,7 +48,7 @@ elif (existing == 'N') :
         spy_name = spy['salutation'] + " " + spy['name']
         tempcheck=True
         while tempcheck:
-            spy['age'] = input("Enter the age:")
+            spy['age'] = input("Enter your age:")
             if (re.match(patternage, spy['age']) != None):
                 tempcheck = False
                 spy['age'] = int(spy['age'])

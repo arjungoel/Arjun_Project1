@@ -1,5 +1,6 @@
 #import statements
 from globals import STATUS_MESSAGES
+from termcolor import colored
 
 # updated status message.
 updated_status_message = None
@@ -21,9 +22,9 @@ def add_status(current_status_message):
             # adding new status message to the list.
             STATUS_MESSAGES.append(new_status_message)
             updated_status_message = new_status_message
-            print ('Your updated status message is: %s' % (updated_status_message))
+            print ('Your updated status message is: %s' % (updated_status_message),'green')
         else:
-            print ("You did not provided any status message. Try again.")
+            print ("You did not provided any status message. Try again.",'red')
     elif (default.upper() == 'Y'):
         # counter for serial number of messages.
         item_position = 1
@@ -39,11 +40,11 @@ def add_status(current_status_message):
         # validating users input.
         if len(STATUS_MESSAGES) >= message_selection:
             updated_status_message = STATUS_MESSAGES[message_selection - 1]
-            print ('Your updated status message is: %s' % (updated_status_message))
+            print ('Your updated status message is: %s' % (updated_status_message),'green')
         else:
-            print ("Invalid choice. Try again.")
+            print ("Invalid choice. Try again.",'red')
     else:
-        print ('The option you chose is not valid! Press either y or n.')
+        print ('The option you chose is not valid! Press either y or n.','red')
 
     return updated_status_message
 

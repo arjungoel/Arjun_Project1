@@ -1,7 +1,7 @@
 # import statements
 from globals import current_status_message
 from add_status import add_status
-from add_friend import add_friend
+#from add_friend import add_friend
 from send_message import send_message
 from read_message import read_message
 from read_chat import read_chat

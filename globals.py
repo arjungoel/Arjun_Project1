@@ -14,12 +14,12 @@ STATUS_MESSAGES = ['My name is Bla Bla Bla!!!!, Sir']
 friends = []
 # class Spy
 class Spy:
-    def __init__(self, salutation, name, age, rating, isonline):
+    def __init__(self, salutation, name, age, rating, is_online):
         # Assigning Values
         self.Name = salutation + "." + name
         self.Age = age
         self.Rating = rating
-        self.SpyOnline = isonline
+        self.SpyOnline = is_online
         self.chat = []
     def displayDetails(self):
         print(self.Name, " ", self.Age)

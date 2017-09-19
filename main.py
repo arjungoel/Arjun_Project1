@@ -39,7 +39,7 @@ while repeat:
                     print colored("Wrong choice.Enter Again!!!!", 'red')
             tempcheck=True
             while tempcheck:
-            spy['name']=raw_input("Provide your name here :")
+                spy['name']=raw_input("Provide your name here :")
                 if (re.match(patternname, spy['name']) != None):
                     tempcheck = False
                 else:
@@ -55,10 +55,10 @@ while repeat:
                     print colored("Invalid age.Enter Again!!!!", 'red')
             tempcheck = True
             while tempcheck:
-                spy['rating'] = float(raw_input("What is your Spy rating ?"))
+                 spy['rating'] = float(raw_input("What is your Spy rating ?"))
                  if (re.match(patternrating, spy['rating']) != None):
-                    tempcheck = False
-                else:
+                  tempcheck = False
+                 else:
                     print colored("Your rating does not match.Enter Again!!!!", 'red')
             spy['is_online'] = True
             wholecheck = False

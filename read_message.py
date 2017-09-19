@@ -4,7 +4,6 @@ from datetime import datetime
 from termcolor import colored
 from globals import friends
 import re
-
 def read_message():
     # choose friend from the list
     sender=select_friend()
@@ -15,15 +14,15 @@ def read_message():
             if (re.match(patternimage, encrypted_image) != None):
                 temp = False
             else:
-                print colored("Wrong choice.Enter Again!", 'red')
-        try:    # Exception Handling
+                print colored("Wrong choice.Enter Again!",'red')
+    try:    # Exception Handling
             # Decrypt the message
-            text = secret_message = Steganography.decode(encrypted_image)
-            print "message:", text
-        except TypeError:
-            print colored("Image does not have any message!", 'red')
-        except IOError:
-            print colored("Image Does Not Exists!!!!", 'red')
+        text = secret_message = Steganography.decode(encrypted_image)
+        print "message:",text
+    except TypeError:
+        print colored("Image does not have any message!", 'red')
+    except IOError:
+        print colored("Image Does Not Exists!!!!", 'red')
 
         # save the messages
         new_chat = {

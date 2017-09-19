@@ -1,14 +1,16 @@
 # import statements
-from globals import current_status_message
+#from globals import current_status_message
 from add_status import add_status
-#from add_friend import add_friend
-from send_message import send_message
-from read_message import read_message
-from read_chat import read_chat
-from termcolor import colored
+from add_friend import add_friend
 
 # start_chat() function definition.
 def start_chat(name, age, rating, status):
+    from send_message import send_message
+    from read_message import read_message
+    from globals import current_status_message
+    from globals import friends
+    from termcolor import colored
+
     # validating users details.
     error_message = None # variable for storing error messages.
 
@@ -24,11 +26,11 @@ def start_chat(name, age, rating, status):
                           "Proud to have you onboard" + "\n"
         if (rating > 4.0):
             welcome_message = welcome_message + "Great work"
-        if (rating >= 3.0):
+        elif (rating >= 3.0):
             welcome_message = welcome_message + "Average"
         else:
             welcome_message = welcome_message + "Do some work to increase your's rating"
-        print (welcome_message,'green')
+        print colored(welcome_message,'green')
 
         # displaying menu for user.
         show_menu = True
@@ -40,7 +42,7 @@ def start_chat(name, age, rating, status):
                            "4. Read a secret message \n " \
                            "5. Read Chats from a user \n " \
                            "6. Close Application \n"
-            result = int(input(menu_choices))
+            result = int(raw_input(menu_choices))
 
             # validating users input
             if (result == 1):
@@ -55,8 +57,6 @@ def start_chat(name, age, rating, status):
                 send_message()
             elif(result == 4):
                 read_message()
-            elif(result==5):
-                read_chat()
             elif(result == 6):
                 # close application
                 show_menu = False
